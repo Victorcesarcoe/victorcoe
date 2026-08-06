@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import victorPhoto from "@/assets/victor-coe.png.asset.json";
+import logoVictorCoe from "@/assets/logo-victor-coe-white.png.asset.json";
 import {
   ArrowRight,
   BadgeCheck,
@@ -86,9 +87,13 @@ function Landing() {
   return (
     <main className="bg-hero min-h-screen">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <span className="font-display text-lg font-bold tracking-tight">
-          Victor <span className="text-gradient">Cóe</span>
-        </span>
+        <a href="/" className="flex items-center">
+          <img
+            src={logoVictorCoe.url}
+            alt="Victor Cóe"
+            className="h-12 w-auto"
+          />
+        </a>
         <a
           href="tel:+5521992232661"
           className="hidden items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground sm:flex"
