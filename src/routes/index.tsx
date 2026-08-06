@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import victorPhoto from "@/assets/victor-coe.png.asset.json";
-import logoVictorCoe from "@/assets/logo-victor-coe.png.asset.json";
+import logoVictorCoe from "@/assets/logo-victor-coe-white.png.asset.json";
 import {
   ArrowRight,
   BadgeCheck,
