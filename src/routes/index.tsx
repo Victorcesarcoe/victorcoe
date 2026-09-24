@@ -25,17 +25,17 @@ const WHATSAPP =
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Victor Cóe | Agentes de IA para Empresas" },
+      { title: "Victor Cóe | Consultoria de Marketing Digital" },
       {
         name: "description",
         content:
-          "Especialista em Agentes de IA para empresas: atraia mais clientes, venda mais e reduza custos com automação inteligente. Fale com Victor Cóe no WhatsApp.",
+          "Consultoria de marketing digital para empresas: sites profissionais, social media, vídeos, Google Meu Negócio e tráfego pago — com ferramentas de Inteligência Artificial para acelerar resultados. Fale com Victor Cóe no WhatsApp.",
       },
-      { property: "og:title", content: "Victor Cóe | Agentes de IA para Empresas" },
+      { property: "og:title", content: "Victor Cóe | Consultoria de Marketing Digital" },
       {
         property: "og:description",
         content:
-          "Implementação de Agentes de IA, landing pages de alta conversão, sites, vídeos e fotos profissionais.",
+          "Consultoria de marketing digital para empresas com sites profissionais, social media, vídeos, Google Meu Negócio, tráfego pago e Inteligência Artificial.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -54,18 +54,19 @@ const beneficios = [
 ];
 
 const servicos = [
-  { icon: Bot, title: "Agentes de IA personalizados" },
-  { icon: LayoutTemplate, title: "Landing pages de alta conversão" },
   { icon: Globe, title: "Sites profissionais" },
+  { icon: LayoutTemplate, title: "Landing pages de alta conversão" },
+  { icon: Camera, title: "Social media" },
   { icon: Video, title: "Produção de vídeos para marketing" },
-  { icon: Camera, title: "Fotos profissionais para divulgação" },
+  { icon: BadgeCheck, title: "Google Meu Negócio otimizado" },
+  { icon: Bot, title: "Automações e Agentes de IA" },
 ];
 
 const etapas = [
-  { n: "01", title: "Diagnóstico", desc: "Entendo profundamente o funcionamento do seu negócio." },
-  { n: "02", title: "Processos inteligentes", desc: "Desenho o fluxo ideal para automatizar com clareza." },
-  { n: "03", title: "Implementação", desc: "Agentes de IA sob medida integrados à sua operação." },
-  { n: "04", title: "Resultado", desc: "Mais produtividade, melhor experiência e vendas em alta." },
+  { n: "01", title: "Diagnóstico", desc: "Entendo seu negócio, seu público e onde estão as oportunidades perdidas." },
+  { n: "02", title: "Estratégia", desc: "Desenho o plano de marketing certo para o seu momento — site, conteúdo, tráfego ou automação." },
+  { n: "03", title: "Execução", desc: "Produção e implementação com qualidade e ferramentas de IA para agilidade." },
+  { n: "04", title: "Resultado", desc: "Mais visibilidade, mais contatos e mais vendas." },
 ];
 
 function CTA({ label = "Vamos conversar" }: { label?: string }) {
@@ -110,15 +111,14 @@ function Landing() {
       <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 pt-8 pb-20 md:grid-cols-2 md:pt-16">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase text-muted-foreground">
-            <BadgeCheck className="size-4 text-accent" /> Especialista em Agentes de IA
+            <BadgeCheck className="size-4 text-accent" /> CONSULTORIA DE MARKETING DIGITAL
           </span>
           <h1 className="mt-6 text-4xl leading-[1.05] font-extrabold sm:text-5xl lg:text-6xl">
-            Sua empresa vendendo mais com <span className="text-gradient">Inteligência Artificial</span>
+            Sua empresa vendendo mais, com <span className="text-gradient">marketing que funciona</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            Ajudo negócios a crescerem com Agentes de IA personalizados que automatizam tarefas, aumentam a
-            produtividade e melhoram a experiência do cliente — além de landing pages, sites, vídeos e fotos
-            profissionais.
+            Ajudo negócios a crescerem com sites profissionais, presença digital forte e criativos que convertem —
+            usando ferramentas de Inteligência Artificial para produzir mais rápido e com mais precisão.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <CTA />
@@ -135,7 +135,7 @@ function Landing() {
           <div className="absolute -inset-4 rounded-[2rem] bg-primary/20 blur-3xl" aria-hidden />
           <img
             src={victorPhoto.url}
-            alt="Victor Cóe, especialista em Agentes de IA para empresas"
+            alt="Victor Cóe, consultor de marketing digital"
             className="relative w-full rounded-[2rem] border border-border object-cover shadow-card"
             loading="eager"
           />
@@ -191,10 +191,10 @@ function Landing() {
       <section className="mx-auto max-w-6xl px-6 pb-24">
         <div className="glass-card glow rounded-3xl p-10 text-center sm:p-14">
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Pronto para modernizar sua empresa?
+            Pronto para vender mais?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Vamos conversar e mostro exatamente como a Inteligência Artificial pode funcionar no seu negócio.
+            Vamos conversar e eu mostro exatamente como estruturar o marketing do seu negócio.
           </p>
           <div className="mt-8 flex justify-center">
             <CTA label="Falar no WhatsApp" />
@@ -203,7 +203,7 @@ function Landing() {
       </section>
 
       <footer className="border-t border-border px-6 py-8 text-center text-sm text-muted-foreground">
-        Victor Cóe · Agentes de IA para Empresas · (21) 99223-2661
+        Victor Cóe · Consultoria de Marketing Digital · (21) 99223-2661
       </footer>
     </main>
   );
