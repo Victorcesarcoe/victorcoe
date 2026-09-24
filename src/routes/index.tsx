@@ -1,12 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import victorPhoto from "@/assets/victor-coe.png.asset.json";
 import logoVictorCoe from "@/assets/logo-victor-coe-white.png.asset.json";
+import portfolioVideo from "@/assets/video-institucional-ia.mp4.asset.json";
 import {
   ArrowRight,
   BadgeCheck,
   Bot,
+  CalendarCheck,
   Camera,
   Clock,
+  ExternalLink,
   Gauge,
   Headphones,
   LayoutTemplate,
@@ -67,6 +70,29 @@ const etapas = [
   { n: "02", title: "Estratégia", desc: "Desenho o plano de marketing certo para o seu momento — site, conteúdo, tráfego ou automação." },
   { n: "03", title: "Execução", desc: "Produção e implementação com qualidade e ferramentas de IA para agilidade." },
   { n: "04", title: "Resultado", desc: "Mais visibilidade, mais contatos e mais vendas." },
+];
+
+const projetos = [
+  {
+    title: "Locação por temporada",
+    desc: "Landing page para apresentar apartamentos de temporada no Rio de Janeiro, com foco em vídeo-tour dos ambientes como principal ferramenta de conversão.",
+    href: "https://www.mcapartments.com.br",
+  },
+  {
+    title: "Nutricionista",
+    desc: "Landing page de alta conversão para consultório de nutrição especializado em emagrecimento e reeducação alimentar, transformando seguidores do Instagram em agendamentos diretos via WhatsApp.",
+    href: "https://www.nathaliafonseca.com.br",
+  },
+  {
+    title: "Rede de bazares",
+    desc: "Site institucional premium para rede com mais de 6 unidades físicas, com identidade visual própria e estrutura pensada para converter visitantes em clientes de loja física.",
+    href: "https://www.estacaobazar.com.br",
+  },
+  {
+    title: "Barbearia",
+    desc: "Landing page para rede de barbearia com duas unidades, integrando agendamento direto e contato via WhatsApp, reduzindo a fricção entre visitar a página e marcar horário.",
+    href: "https://www.onmen.com.br",
+  },
 ];
 
 function CTA({ label = "Vamos conversar" }: { label?: string }) {
@@ -173,6 +199,66 @@ function Landing() {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16" aria-labelledby="portfolio-title">
+        <h2 id="portfolio-title" className="text-3xl font-bold sm:text-4xl">
+          Projetos que já entreguei
+        </h2>
+        <p className="mt-3 max-w-2xl text-muted-foreground">Resultado real para negócios reais.</p>
+
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {projetos.map((projeto) => (
+            <article key={projeto.title} className="glass-card flex min-h-64 flex-col rounded-2xl p-6">
+              <h3 className="text-xl font-semibold">{projeto.title}</h3>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{projeto.desc}</p>
+              <a
+                href={projeto.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Ver projeto ${projeto.title} em uma nova aba`}
+                className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-semibold transition-colors hover:bg-secondary/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                Ver projeto <ExternalLink className="size-4" aria-hidden="true" />
+              </a>
+            </article>
+          ))}
+
+          <article className="glass-card overflow-hidden rounded-2xl md:col-span-2 lg:col-span-2">
+            <div className="grid h-full md:grid-cols-[minmax(0,0.75fr)_minmax(0,1.25fr)]">
+              <video
+                className="aspect-[9/16] h-full max-h-[34rem] w-full bg-secondary/30 object-contain"
+                src={portfolioVideo.url}
+                controls
+                playsInline
+                preload="metadata"
+                aria-label="Vídeo institucional produzido com Inteligência Artificial"
+              />
+              <div className="flex flex-col justify-center p-6 sm:p-8">
+                <h3 className="text-xl font-semibold">Vídeo institucional com IA</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Vídeo institucional produzido com Inteligência Artificial para campanha publicitária de uma rede
+                  de farmácia — mostrando como a tecnologia pode acelerar produção audiovisual profissional com
+                  qualidade e agilidade.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <article className="glass-card glow mt-5 flex flex-col gap-5 rounded-2xl p-7 sm:p-9 md:flex-row md:items-center">
+          <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/20">
+            <CalendarCheck className="size-6 text-primary" aria-hidden="true" />
+          </span>
+          <div>
+            <h3 className="text-xl font-semibold">Sistema de agendamento online</h3>
+            <p className="mt-2 max-w-4xl text-sm leading-relaxed text-muted-foreground">
+              Desenvolvo também sistemas de agendamento próprios — com painel administrativo, confirmação automática
+              e integração com WhatsApp — ideais para barbearias, salões e clínicas que ainda organizam horários
+              manualmente.
+            </p>
+          </div>
+        </article>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-16">
