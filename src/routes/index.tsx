@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import victorPhoto from "@/assets/victor-coe.png.asset.json";
 import logoVictorCoe from "@/assets/logo-victor-coe-white.png.asset.json";
 import portfolioVideo from "@/assets/video-institucional-ia.mp4.asset.json";
+import allouProject from "@/assets/prospec-ALLOU.png.asset.json";
 import {
   ArrowRight,
   BadgeCheck,
   Bot,
-  CalendarCheck,
   Camera,
   Clock,
   ExternalLink,
@@ -246,17 +246,22 @@ function Landing() {
           </article>
         </div>
 
-        <article className="glass-card glow mt-5 flex flex-col gap-5 rounded-2xl p-7 sm:p-9 md:flex-row md:items-center">
-          <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/20">
-            <CalendarCheck className="size-6 text-primary" aria-hidden="true" />
-          </span>
-          <div>
-            <h3 className="text-xl font-semibold">Sistema de agendamento online</h3>
-            <p className="mt-2 max-w-4xl text-sm leading-relaxed text-muted-foreground">
-              Desenvolvo também sistemas de agendamento próprios — com painel administrativo, confirmação automática
-              e integração com WhatsApp — ideais para barbearias, salões e clínicas que ainda organizam horários
-              manualmente.
-            </p>
+        <article className="glass-card glow mt-5 overflow-hidden rounded-2xl">
+          <div className="grid md:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] md:items-stretch">
+            <img
+              src={allouProject.url}
+              alt="Allou, sistema de agendamento e gestão para negócios"
+              className="aspect-[1.19/1] h-full w-full object-cover"
+              loading="lazy"
+            />
+            <div className="flex flex-col justify-center p-7 sm:p-9">
+              <h3 className="text-xl font-semibold sm:text-2xl">Allou — Tecnologia para negócios que não param</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Sistema de agendamento online próprio, com agenda inteligente, atendimento automático via WhatsApp,
+                painel administrativo completo e relatórios de faturamento em tempo real. Ideal para barbearias,
+                salões e clínicas que ainda organizam horários manualmente.
+              </p>
+            </div>
           </div>
         </article>
       </section>
